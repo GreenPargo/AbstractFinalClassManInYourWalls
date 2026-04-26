@@ -361,13 +361,13 @@ public class IUSingleLinkedList<E> implements IndexedUnsortedList<E> {
 			removeElement(previous, current);
 
 			// This should always happen
-			current = next;
+			current = previous;
 
 			// If it isn't the last item next is set to the next item in succession
 			// If it is the last item, we don't touch it since next == null
-			if (next != null) {
-				next = next.getNext();
-			}
+			// if (next != null) {
+			// 	next = next.getNext();
+			// }
 
 			// Keeps modCounts sync'd and prevents consecutive remove() calls
 			iterModCount++;
